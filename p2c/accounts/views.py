@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,HttpResponseRedirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages
 from.forms import EditUser
 from django.contrib.auth.forms import AuthenticationForm
@@ -6,6 +6,12 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as dj_login,logout
 
 # Create your views here.
+
+def accounts(request):
+    return render(request, 'accounts.html')
+
+def home(request):
+    return render(request, 'accounts.html')    
 
 def profile(request):  #p2c-21-105
     if request.user.is_authenticated:

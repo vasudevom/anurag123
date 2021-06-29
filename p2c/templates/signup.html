@@ -14,6 +14,7 @@
             
                 <div class="col-sm-12">
                     <form class="md-float-material form-material" id="sign" action="#" method="POST">
+                        {% csrf_token %}
                         <div class="auth-box card">
                             <div class="card-block" id="signup">
                                 <div class="row">
@@ -39,7 +40,7 @@
                                     <div class="col-md-12" id="linkedin"> <a class="btn btn-lg btn-linkedin btn-block btn-outline" href="#"><img src="../static/img/linkedin.png"> Signup Using Linkedin</a> </div>
                                 
                                 <br>
-                                <p class="text-inverse text-center">Already have an account? <a href="login.html" data-abc="true">Login</a></p>
+                                <p class="text-inverse text-center">Already have an account? <a href="login/" data-abc="true">Login</a></p>
                             </div>
                         </div>
                     </form>
