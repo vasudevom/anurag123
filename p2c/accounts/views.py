@@ -6,19 +6,13 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as dj_login,logout
 
 # Create your views here.
-
+#P2C-21-027
 def accounts(request):
     return render(request, 'accounts.html')
 
 def home(request):
     return render(request, 'accounts.html')    
 
-def profile(request):  #p2c-21-105
-    if request.user.is_authenticated:
-        fm=EditUser(instance=request.user)
-        return render(request,'profile.html',{'name':request.user,'form':fm})
-    else:
-        return HttpResponseRedirect('/login/')
 
 def signup(request):
     return render(request, 'signup.html')
@@ -26,7 +20,16 @@ def signup(request):
 def forgot_password(request):
     return render(request, 'forgot_password.html')
 
-def register(request):                          #p2c-21-105
+
+#p2c-21-105
+def profile(request):  
+    if request.user.is_authenticated:
+        fm=EditUser(instance=request.user)
+        return render(request,'profile.html',{'name':request.user,'form':fm})
+    else:
+        return HttpResponseRedirect('/login/')
+
+def register(request):                         
     if request.method == 'POST':
         fname = request.POST.get('firstname')
         lname = request.POST.get('lastname')
