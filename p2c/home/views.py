@@ -9,3 +9,7 @@ def home(request):
 
 def accounts(request):
     return render(request, 'accounts.html')
+
+def courses(request):
+    return render(request, 'courses.html')
+
