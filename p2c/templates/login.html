@@ -1,7 +1,6 @@
 {% extends  'base.html' %}
 {% block content %}
     <section class="login-block">
-        <div class="container-fluid">
             <div class="col-sm-12">
                 <form class="md-float-material form-material" id="sign" action="/login/" method="POST">
                     {% csrf_token %}

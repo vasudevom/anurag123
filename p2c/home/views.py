@@ -4,7 +4,7 @@ from django.shortcuts import render, HttpResponse
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
   
 
 def accounts(request):
